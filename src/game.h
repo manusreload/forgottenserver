@@ -504,7 +504,9 @@ class Game
 		Raids raids;
 		Quests quests;
 
-	protected:
+	void reload();
+
+protected:
 		bool playerSayCommand(Player* player, const std::string& text);
 		bool playerSaySpell(Player* player, SpeakClasses type, const std::string& text);
 		void playerWhisper(Player* player, const std::string& text);

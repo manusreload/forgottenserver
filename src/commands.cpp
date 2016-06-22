@@ -220,6 +220,9 @@ void Commands::reloadInfo(Player& player, const std::string& param)
 		g_game.raids.reload();
 		g_game.raids.startup();
 		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Reloaded raids.");
+	}else if (tmpParam == "game") {
+		g_game.reload();
+		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Reloaded game.");
 	} else if (tmpParam == "spell" || tmpParam == "spells") {
 		g_spells->reload();
 		g_monsters.reload();

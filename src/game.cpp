@@ -5538,3 +5538,21 @@ void Game::removeUniqueItem(uint16_t uniqueId)
 		uniqueItems.erase(it);
 	}
 }
+
+void Game::reload() {
+
+	commands.reload();
+
+	stages.clear();
+	loadExperienceStages();
+
+	raids.reload();
+
+	quests.reload();
+	mounts.reload();
+
+	loadMotdNum();
+	loadPlayersRecord();
+}
+
+
